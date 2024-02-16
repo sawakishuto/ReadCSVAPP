@@ -40,7 +40,9 @@ class ViewController: UIViewController {
     }
 
     lazy var csvTable: UITableView = {
-        let csvTable = UITableView()
+        let csvTable = UITableView(frame: .zero, style: .grouped)
+        csvTable.translatesAutoresizingMaskIntoConstraints = false
+
         return csvTable
     }()
 }
@@ -54,7 +56,10 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = csvTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = csvContents[indexPath.row]
+        var content = cell.defaultContentConfiguration()
+        content.text = csvContents[indexPath.row]
+        cell.contentConfiguration = content
+
         return cell
 
     }
