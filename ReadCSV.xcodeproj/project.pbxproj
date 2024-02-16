@@ -17,6 +17,8 @@
 		08537BFF2B7F78B400F42C9A /* ReadCSVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537BFE2B7F78B400F42C9A /* ReadCSVUITests.swift */; };
 		08537C012B7F78B400F42C9A /* ReadCSVUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537C002B7F78B400F42C9A /* ReadCSVUITestsLaunchTests.swift */; };
 		08537C0E2B7F935500F42C9A /* seichi.csv in Resources */ = {isa = PBXBuildFile; fileRef = 08537C0D2B7F935500F42C9A /* seichi.csv */; };
+		08537C112B7F965100F42C9A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 08537C102B7F965100F42C9A /* SnapKit */; };
+		08537C132B7F96C500F42C9A /* csvTableCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537C122B7F96C500F42C9A /* csvTableCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 		08537BFE2B7F78B400F42C9A /* ReadCSVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadCSVUITests.swift; sourceTree = "<group>"; };
 		08537C002B7F78B400F42C9A /* ReadCSVUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadCSVUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		08537C0D2B7F935500F42C9A /* seichi.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = seichi.csv; sourceTree = "<group>"; };
+		08537C122B7F96C500F42C9A /* csvTableCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = csvTableCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08537C112B7F965100F42C9A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +108,7 @@
 				08537BDD2B7F78B000F42C9A /* AppDelegate.swift */,
 				08537BDF2B7F78B000F42C9A /* SceneDelegate.swift */,
 				08537BE12B7F78B000F42C9A /* ViewController.swift */,
+				08537C122B7F96C500F42C9A /* csvTableCellTableViewCell.swift */,
 				08537BE32B7F78B000F42C9A /* Main.storyboard */,
 				08537BE62B7F78B300F42C9A /* Assets.xcassets */,
 				08537BE82B7F78B300F42C9A /* LaunchScreen.storyboard */,
@@ -146,6 +151,9 @@
 			dependencies = (
 			);
 			name = ReadCSV;
+			packageProductDependencies = (
+				08537C102B7F965100F42C9A /* SnapKit */,
+			);
 			productName = ReadCSV;
 			productReference = 08537BDA2B7F78B000F42C9A /* ReadCSV.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 08537BD12B7F78B000F42C9A;
+			packageReferences = (
+				08537C0F2B7F965100F42C9A /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 08537BDB2B7F78B000F42C9A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08537BE22B7F78B000F42C9A /* ViewController.swift in Sources */,
+				08537C132B7F96C500F42C9A /* csvTableCellTableViewCell.swift in Sources */,
 				08537BDE2B7F78B000F42C9A /* AppDelegate.swift in Sources */,
 				08537BE02B7F78B000F42C9A /* SceneDelegate.swift in Sources */,
 			);
@@ -605,6 +617,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		08537C0F2B7F965100F42C9A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		08537C102B7F965100F42C9A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08537C0F2B7F965100F42C9A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 08537BD22B7F78B000F42C9A /* Project object */;
 }
