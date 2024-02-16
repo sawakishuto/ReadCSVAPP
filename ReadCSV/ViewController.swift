@@ -35,9 +35,33 @@ class ViewController: UIViewController {
         } catch {
             return
         }
+
         // Do any additional setup after loading the view.
     }
 
+    lazy var csvTable: UITableView = {
+        let csvTable = UITableView()
+        return csvTable
+    }()
+}
+extension ViewController: UITableViewDelegate {
 
+}
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = csvTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = csvContents[indexPath.row]
+        return cell
+
+    }
+    
+
+}
+#Preview("UIKit") {
+    ViewController()
 }
 
