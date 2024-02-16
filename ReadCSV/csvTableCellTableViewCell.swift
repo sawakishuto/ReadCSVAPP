@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import SnapKit
 
 class csvTableCellTableViewCell: UITableViewCell {
-
+    var text: String!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +20,11 @@ class csvTableCellTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
+    lazy var csvLable: UILabel = {
+        let csvLabel = UILabel()
+        csvLabel.textColor = .brown
+        return csvLabel
+    }()
 
 }
