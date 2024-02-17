@@ -59,6 +59,7 @@ extension ViewController: UITableViewDataSource {
         var content = cell.defaultContentConfiguration()
         content.text = csvContents[indexPath.row]
         cell.contentConfiguration = content
+        print(cell.textLabel?.text ?? "何もない")
 
         return cell
 
