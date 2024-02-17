@@ -14,14 +14,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         csvTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         csvTable.dataSource = self
-        csvTable.delegate = self
         view.addSubview(csvTable)
-        csvTable.snp.makeConstraints { c in
-            c.centerX.equalToSuperview()
-            c.leading.equalTo(0)
-            c.trailing.equalTo(0)
-            c.bottom.equalTo(0)
-            
+        csvTable.snp.makeConstraints { make in
+          make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+          make.left.right.equalToSuperview()
+          make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
 
         guard let path = Bundle.main.path(forResource: "seichi", ofType: "csv") else {
