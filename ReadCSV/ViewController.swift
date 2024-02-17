@@ -41,9 +41,8 @@ class ViewController: UIViewController {
     }
 
     lazy var csvTable: UITableView = {
-        let csvTable = UITableView(frame: .zero, style: .grouped)
+        let csvTable = UITableView()
         csvTable.translatesAutoresizingMaskIntoConstraints = false
-
         return csvTable
     }()
 }
