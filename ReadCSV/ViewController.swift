@@ -42,14 +42,17 @@ class ViewController: UIViewController {
         csvTable.translatesAutoresizingMaskIntoConstraints = false
         return csvTable
     }()
+    lazy var label: UILabel = {
+        let label = UILabel()
+        label.text = "iruyo"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
 }
-extension ViewController: UITableViewDelegate {
 
-}
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
-    }
+        return csvContents.count    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = csvTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
